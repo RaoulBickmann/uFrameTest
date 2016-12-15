@@ -24,9 +24,22 @@ namespace test {
     
     public partial class TestSystemBase : uFrame.ECS.Systems.EcsSystem {
         
+        private IEcsComponentManagerOf<Health> _HealthManager;
+        
         private IEcsComponentManagerOf<TestComponentNode> _TestComponentNodeManager;
         
+        private IEcsComponentManagerOf<NewGroupNode> _NewGroupNodeManager;
+        
         private TestSystemOnMouseDownHandler TestSystemOnMouseDownHandlerInstance = new TestSystemOnMouseDownHandler();
+        
+        public IEcsComponentManagerOf<Health> HealthManager {
+            get {
+                return _HealthManager;
+            }
+            set {
+                _HealthManager = value;
+            }
+        }
         
         public IEcsComponentManagerOf<TestComponentNode> TestComponentNodeManager {
             get {
@@ -37,9 +50,20 @@ namespace test {
             }
         }
         
+        public IEcsComponentManagerOf<NewGroupNode> NewGroupNodeManager {
+            get {
+                return _NewGroupNodeManager;
+            }
+            set {
+                _NewGroupNodeManager = value;
+            }
+        }
+        
         public override void Setup() {
             base.Setup();
+            HealthManager = ComponentSystem.RegisterComponent<Health>(2);
             TestComponentNodeManager = ComponentSystem.RegisterComponent<TestComponentNode>(1);
+            NewGroupNodeManager = ComponentSystem.RegisterGroup<NewGroupNodeGroup,NewGroupNode>();
             this.OnEvent<uFrame.ECS.UnityUtilities.MouseDownDispatcher>().Subscribe(_=>{ TestSystemOnMouseDownFilter(_); }).DisposeWith(this);
         }
         

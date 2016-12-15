@@ -30,8 +30,36 @@ static
         
         #region 
 static
+        public uFrame.ECS.APIs.IEcsComponentManagerOf<Health> HealthManager(this uFrame.ECS.APIs.IEcsSystem system) {
+            return system.ComponentSystem.RegisterComponent<Health>();
+        }
+        #endregion
+        
+        #region 
+static
+        public uFrame.ECS.APIs.IEcsComponentManagerOf<NewGroupNode> NewGroupNodeManager(this uFrame.ECS.APIs.IEcsSystem system) {
+            return system.ComponentSystem.RegisterComponent<NewGroupNode>();
+        }
+        #endregion
+        
+        #region 
+static
         public List<TestComponentNode> TestComponentNodeComponents(this uFrame.ECS.APIs.IEcsSystem system) {
             return system.ComponentSystem.RegisterComponent<TestComponentNode>().Components;
+        }
+        #endregion
+        
+        #region 
+static
+        public List<Health> HealthComponents(this uFrame.ECS.APIs.IEcsSystem system) {
+            return system.ComponentSystem.RegisterComponent<Health>().Components;
+        }
+        #endregion
+        
+        #region 
+static
+        public List<NewGroupNode> NewGroupNodeComponents(this uFrame.ECS.APIs.IEcsSystem system) {
+            return system.ComponentSystem.RegisterComponent<NewGroupNode>().Components;
         }
         #endregion
     }

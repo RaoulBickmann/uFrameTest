@@ -1,0 +1,8 @@
+{
+	"Identifier":"e5ee1ce5-e620-4195-8d41-af41783293df"	, 
+	"Time":"12/16/2016 12:54:05 AM"	, 
+	"Group":"0545"	, 
+	"DataRecordId":"559cd358-2eae-4b55-a37a-09f57bf8b10a"	, 
+	"Type":0	, 
+	"RecordType":"uFrame.ECS.Editor.Breakpoint, Assembly-CSharp-Editor-firstpass, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"	, 
+	"Data":"{\r\n\t\"Identifier\":\"559cd358-2eae-4b55-a37a-09f57bf8b10a\"\t, \r\n\t\"ForIdentifier\":\"a19e13ba-2ed8-4a9d-832c-d9a989304ed1\"}\r\n"}
