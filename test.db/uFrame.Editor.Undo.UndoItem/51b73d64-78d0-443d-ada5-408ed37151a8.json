@@ -1,0 +1,8 @@
+{
+	"Identifier":"51b73d64-78d0-443d-ada5-408ed37151a8"	, 
+	"Time":"12/16/2016 1:36:06 PM"	, 
+	"Group":13365	, 
+	"DataRecordId":"4074116b-c34f-4b37-96ee-ea0f08996f9d"	, 
+	"Type":1	, 
+	"RecordType":"uFrame.ECS.Editor.PropertiesChildItem, Assembly-CSharp-Editor-firstpass, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"	, 
+	"Data":"{\r\n\t\"FriendlyName\":\"DmgValue\"\t, \r\n\t\"RelatedType\":\"\"\t, \r\n\t\"Identifier\":\"4074116b-c34f-4b37-96ee-ea0f08996f9d\"\t, \r\n\t\"NodeId\":\"ca201d0d-2782-4707-a399-db114e42e575\"\t, \r\n\t\"Order\":0\t, \r\n\t\"Name\":\"DmgValue\"}\r\n"}

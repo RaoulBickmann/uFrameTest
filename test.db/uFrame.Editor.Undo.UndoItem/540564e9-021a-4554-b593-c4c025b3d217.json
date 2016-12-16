@@ -1,0 +1,8 @@
+{
+	"Identifier":"540564e9-021a-4554-b593-c4c025b3d217"	, 
+	"Time":"12/16/2016 1:36:37 PM"	, 
+	"Group":133636	, 
+	"DataRecordId":"85751ef0-6815-48bb-a1b5-47fc001b9471"	, 
+	"Type":1	, 
+	"RecordType":"uFrame.ECS.Editor.PropertiesChildItem, Assembly-CSharp-Editor-firstpass, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"	, 
+	"Data":"{\r\n\t\"FriendlyName\":\"HealthValue\"\t, \r\n\t\"RelatedType\":\"\"\t, \r\n\t\"Identifier\":\"85751ef0-6815-48bb-a1b5-47fc001b9471\"\t, \r\n\t\"NodeId\":\"a618bcaf-b218-4724-b91f-c2c7e14e4bbc\"\t, \r\n\t\"Order\":0\t, \r\n\t\"Name\":\"HealthValue\"}\r\n"}
