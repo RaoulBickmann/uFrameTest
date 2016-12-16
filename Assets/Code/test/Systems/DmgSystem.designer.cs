@@ -26,8 +26,6 @@ namespace test {
         
         private IEcsComponentManagerOf<Health> _HealthManager;
         
-        private IEcsComponentManagerOf<TestComponentNode> _TestComponentNodeManager;
-        
         private IEcsComponentManagerOf<NewGroupNode> _NewGroupNodeManager;
         
         private DmgSystemOnMouseDownHandler DmgSystemOnMouseDownHandlerInstance = new DmgSystemOnMouseDownHandler();
@@ -38,15 +36,6 @@ namespace test {
             }
             set {
                 _HealthManager = value;
-            }
-        }
-        
-        public IEcsComponentManagerOf<TestComponentNode> TestComponentNodeManager {
-            get {
-                return _TestComponentNodeManager;
-            }
-            set {
-                _TestComponentNodeManager = value;
             }
         }
         
@@ -62,7 +51,6 @@ namespace test {
         public override void Setup() {
             base.Setup();
             HealthManager = ComponentSystem.RegisterComponent<Health>(2);
-            TestComponentNodeManager = ComponentSystem.RegisterComponent<TestComponentNode>(1);
             NewGroupNodeManager = ComponentSystem.RegisterGroup<NewGroupNodeGroup,NewGroupNode>();
             this.OnEvent<uFrame.ECS.UnityUtilities.MouseDownDispatcher>().Subscribe(_=>{ DmgSystemOnMouseDownFilter(_); }).DisposeWith(this);
         }

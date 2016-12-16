@@ -55,7 +55,7 @@ namespace test {
             ActionNode14_a = SourceEntity.HealthValue;
             ActionNode14_b = Event.DmgValue;
             // ActionNode
-            while (this.DebugInfo("","9bc983a9-1004-44cf-8efa-6317bb6adb97", this) == 1) yield return null;
+            while (this.DebugInfo("8c69d3e8-48ec-4ca0-b56c-457348fa1617","9bc983a9-1004-44cf-8efa-6317bb6adb97", this) == 1) yield return null;
             // Visit uFrame.ECS.Actions.IntLibrary.Subtract
             ActionNode14_Result = uFrame.ECS.Actions.IntLibrary.Subtract(ActionNode14_a, ActionNode14_b);
             // SetVariableNode

@@ -23,13 +23,6 @@ static
         
         #region 
 static
-        public uFrame.ECS.APIs.IEcsComponentManagerOf<TestComponentNode> TestComponentNodeManager(this uFrame.ECS.APIs.IEcsSystem system) {
-            return system.ComponentSystem.RegisterComponent<TestComponentNode>();
-        }
-        #endregion
-        
-        #region 
-static
         public uFrame.ECS.APIs.IEcsComponentManagerOf<Health> HealthManager(this uFrame.ECS.APIs.IEcsSystem system) {
             return system.ComponentSystem.RegisterComponent<Health>();
         }
@@ -39,13 +32,6 @@ static
 static
         public uFrame.ECS.APIs.IEcsComponentManagerOf<NewGroupNode> NewGroupNodeManager(this uFrame.ECS.APIs.IEcsSystem system) {
             return system.ComponentSystem.RegisterComponent<NewGroupNode>();
-        }
-        #endregion
-        
-        #region 
-static
-        public List<TestComponentNode> TestComponentNodeComponents(this uFrame.ECS.APIs.IEcsSystem system) {
-            return system.ComponentSystem.RegisterComponent<TestComponentNode>().Components;
         }
         #endregion
         
