@@ -33,6 +33,24 @@ namespace test {
         
         private int ActionNode14_Result = default( System.Int32 );
         
+        private int ActionNode19_in = default( System.Int32 );
+        
+        private float ActionNode19_Result = default( System.Single );
+        
+        private float ActionNode25_a = default( System.Single );
+        
+        private int ActionNode22_in = default( System.Int32 );
+        
+        private int IntNode17 = 0;
+        
+        private float ActionNode22_Result = default( System.Single );
+        
+        private float ActionNode25_b = default( System.Single );
+        
+        private bool ActionNode25_Result = default( System.Boolean );
+        
+        private test.DeathEvent PublishEventNode23_Result = default( test.DeathEvent );
+        
         public test.DmgEvent Event {
             get {
                 return _Event;
@@ -55,12 +73,42 @@ namespace test {
             ActionNode14_a = SourceEntity.HealthValue;
             ActionNode14_b = Event.DmgValue;
             // ActionNode
-            while (this.DebugInfo("8c69d3e8-48ec-4ca0-b56c-457348fa1617","9bc983a9-1004-44cf-8efa-6317bb6adb97", this) == 1) yield return null;
+            while (this.DebugInfo("","9bc983a9-1004-44cf-8efa-6317bb6adb97", this) == 1) yield return null;
             // Visit uFrame.ECS.Actions.IntLibrary.Subtract
             ActionNode14_Result = uFrame.ECS.Actions.IntLibrary.Subtract(ActionNode14_a, ActionNode14_b);
             // SetVariableNode
             while (this.DebugInfo("9bc983a9-1004-44cf-8efa-6317bb6adb97","a19e13ba-2ed8-4a9d-832c-d9a989304ed1", this) == 1) yield return null;
             SourceEntity.HealthValue = (System.Int32)ActionNode14_Result;
+            ActionNode19_in = ActionNode14_Result;
+            // ActionNode
+            while (this.DebugInfo("a19e13ba-2ed8-4a9d-832c-d9a989304ed1","f3ac0401-5e75-40d3-be58-1207d12614cb", this) == 1) yield return null;
+            // Visit uFrame.ECS.Actions.Converter.IntToFloat
+            ActionNode19_Result = uFrame.ECS.Actions.Converter.IntToFloat(ActionNode19_in);
+            ActionNode25_a = ActionNode19_Result;
+            ActionNode22_in = IntNode17;
+            // ActionNode
+            while (this.DebugInfo("f3ac0401-5e75-40d3-be58-1207d12614cb","f2c08caa-c3b1-4dcd-b81d-474ad5266516", this) == 1) yield return null;
+            // Visit uFrame.ECS.Actions.Converter.IntToFloat
+            ActionNode22_Result = uFrame.ECS.Actions.Converter.IntToFloat(ActionNode22_in);
+            ActionNode25_b = ActionNode22_Result;
+            // ActionNode
+            while (this.DebugInfo("f2c08caa-c3b1-4dcd-b81d-474ad5266516","95aea129-fa86-43d6-a3d9-abfda8b0a271", this) == 1) yield return null;
+            // Visit uFrame.ECS.Actions.Comparisons.LessThanOrEqual
+            ActionNode25_Result = uFrame.ECS.Actions.Comparisons.LessThanOrEqual(ActionNode25_a, ActionNode25_b, ()=> { System.StartCoroutine(ActionNode25_yes()); }, ()=> { System.StartCoroutine(ActionNode25_no()); });
+            yield break;
+        }
+        
+        private System.Collections.IEnumerator ActionNode25_yes() {
+            // PublishEventNode
+            while (this.DebugInfo("95aea129-fa86-43d6-a3d9-abfda8b0a271","4e748bde-28c0-4d8c-8744-01a5793e7f74", this) == 1) yield return null;
+            var PublishEventNode23_Event = new DeathEvent();
+            PublishEventNode23_Event.SourceEntity = SourceEntity.EntityId;
+            System.Publish(PublishEventNode23_Event);
+            PublishEventNode23_Result = PublishEventNode23_Event;
+            yield break;
+        }
+        
+        private System.Collections.IEnumerator ActionNode25_no() {
             yield break;
         }
     }

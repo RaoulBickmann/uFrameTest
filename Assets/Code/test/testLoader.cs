@@ -25,6 +25,7 @@ namespace test {
             EcsSystem system = null;
             system = this.AddSystem<DmgSystem>();
             system = this.AddSystem<HealthSystem>();
+            system = this.AddSystem<DeathSystem>();
         }
     }
 }
