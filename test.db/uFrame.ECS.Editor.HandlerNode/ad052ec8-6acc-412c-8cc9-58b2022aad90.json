@@ -3,6 +3,7 @@
 	"Custom":false	, 
 	"MetaType":"a7256f4c-f823-4fff-903b-3743885baa61"	, 
 	"VariableCount":0	, 
+	"StartActionId":"248a95d8-d126-4c43-b29a-4e67b4b3f313"	, 
 	"VariableName":"HandlerNode36"	, 
 	"Name":"MenuSystemMenuToggleEvent"	, 
 	"Order":0	, 

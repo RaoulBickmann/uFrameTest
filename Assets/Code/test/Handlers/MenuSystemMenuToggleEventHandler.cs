@@ -27,11 +27,9 @@ namespace test {
         
         private uFrame.ECS.Systems.EcsSystem _System;
         
-        private bool ActionNode38_value = default( System.Boolean );
+        private bool ActionNode45_value = default( System.Boolean );
         
-        private bool BoolNode40 = false;
-        
-        private bool BoolNode41 = true;
+        private bool ActionNode45_Result = default( System.Boolean );
         
         public test.MenuToggleEvent Event {
             get {
@@ -52,25 +50,14 @@ namespace test {
         }
         
         public virtual System.Collections.IEnumerator Execute() {
-            ActionNode38_value = Group.gameObject.active;
+            ActionNode45_value = Group.gameObject.active;
             // ActionNode
-            while (this.DebugInfo("6b5662b6-0eda-4500-88ab-352311c0d5bf","8cde595f-6926-4379-a755-feb41fa9d45a", this) == 1) yield return null;
-            // Visit uFrame.ECS.Actions.Comparisons.IsTrue
-            uFrame.ECS.Actions.Comparisons.IsTrue(ActionNode38_value, ()=> { System.StartCoroutine(ActionNode38_yes()); }, ()=> { System.StartCoroutine(ActionNode38_no()); });
-            yield break;
-        }
-        
-        private System.Collections.IEnumerator ActionNode38_yes() {
+            while (this.DebugInfo("6b5662b6-0eda-4500-88ab-352311c0d5bf","248a95d8-d126-4c43-b29a-4e67b4b3f313", this) == 1) yield return null;
+            // Visit ExampleScript.toggle
+            ActionNode45_Result = ExampleScript.toggle(ActionNode45_value);
             // SetVariableNode
-            while (this.DebugInfo("8cde595f-6926-4379-a755-feb41fa9d45a","62523bc0-3f1b-4182-b2ce-3eceaf96df99", this) == 1) yield return null;
-            Group.gameObject.active = (System.Boolean)BoolNode40;
-            yield break;
-        }
-        
-        private System.Collections.IEnumerator ActionNode38_no() {
-            // SetVariableNode
-            while (this.DebugInfo("62523bc0-3f1b-4182-b2ce-3eceaf96df99","eeded012-68f5-46fb-991a-9a0233a21f9b", this) == 1) yield return null;
-            Group.gameObject.active = (System.Boolean)BoolNode41;
+            while (this.DebugInfo("248a95d8-d126-4c43-b29a-4e67b4b3f313","26938b8b-41cf-4f56-9d90-e03bf210267a", this) == 1) yield return null;
+            Group.gameObject.active = (System.Boolean)ActionNode45_Result;
             yield break;
         }
     }

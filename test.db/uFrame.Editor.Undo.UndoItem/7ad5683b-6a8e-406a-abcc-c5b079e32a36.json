@@ -1,8 +1,0 @@
-{
-	"Identifier":"7ad5683b-6a8e-406a-abcc-c5b079e32a36"	, 
-	"Time":"12/16/2016 3:39:31 PM"	, 
-	"Group":153931	, 
-	"DataRecordId":"2454f451-1984-456c-a2c7-7cd8fa2b4433"	, 
-	"Type":0	, 
-	"RecordType":"uFrame.ECS.Editor.PropertySelectionValue, Assembly-CSharp-Editor-firstpass, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"	, 
-	"Data":"{\r\n\t\"Identifier\":\"2454f451-1984-456c-a2c7-7cd8fa2b4433\"\t, \r\n\t\"NodeId\":\"1f2c8ab9-8008-47ad-88a9-2767cd49c7d3\"\t, \r\n\t\"ItemId\":\"1f2c8ab9-8008-47ad-88a9-2767cd49c7d3:Property\"\t, \r\n\t\"ValueId\":\"5033ca2c-9c55-4833-8815-7ccad24fd270:Group.gameObject.active\"}\r\n"}
