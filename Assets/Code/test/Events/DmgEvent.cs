@@ -15,6 +15,7 @@ namespace test {
     using System.Linq;
     using test;
     using uFrame.ECS;
+    using uFrame.ECS.Components;
     using UniRx;
     
     
@@ -24,12 +25,24 @@ namespace test {
         [UnityEngine.SerializeField()]
         private Int32 _DmgValue;
         
+        [UnityEngine.SerializeField()]
+        private Int32 _SourceEntity;
+        
         public Int32 DmgValue {
             get {
                 return _DmgValue;
             }
             set {
                 _DmgValue = value;
+            }
+        }
+        
+        public Int32 SourceEntity {
+            get {
+                return _SourceEntity;
+            }
+            set {
+                _SourceEntity = value;
             }
         }
     }

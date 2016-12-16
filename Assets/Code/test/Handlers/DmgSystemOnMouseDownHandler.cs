@@ -54,6 +54,7 @@ namespace test {
             while (this.DebugInfo("a19e13ba-2ed8-4a9d-832c-d9a989304ed1","8c69d3e8-48ec-4ca0-b56c-457348fa1617", this) == 1) yield return null;
             var PublishEventNode16_Event = new DmgEvent();
             PublishEventNode16_Event.DmgValue = IntNode3;
+            PublishEventNode16_Event.SourceEntity = Source.EntityId;
             System.Publish(PublishEventNode16_Event);
             PublishEventNode16_Result = PublishEventNode16_Event;
             yield break;

@@ -1,8 +1,0 @@
-{
-	"Identifier":"d0c1509e-71c4-4f31-b014-d63e5caeb70d"	, 
-	"Time":"12/16/2016 12:54:02 AM"	, 
-	"Group":"0542"	, 
-	"DataRecordId":"160d78b3-b6c4-453e-8359-cda89b5feb30"	, 
-	"Type":2	, 
-	"RecordType":"uFrame.ECS.Editor.HandlerNode, Assembly-CSharp-Editor-firstpass, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"	, 
-	"Data":"{\r\n\t\"CodeHandler\":false\t, \r\n\t\"Custom\":false\t, \r\n\t\"MetaType\":\"ca201d0d-2782-4707-a399-db114e42e575\"\t, \r\n\t\"VariableCount\":0\t, \r\n\t\"VariableName\":\"HandlerNode12\"\t, \r\n\t\"Name\":\"HealthSystemDmgEvent\"\t, \r\n\t\"Order\":0\t, \r\n\t\"GraphId\":\"64710783-1311-4120-8e27-bdedd91f71a0\"\t, \r\n\t\"Identifier\":\"160d78b3-b6c4-453e-8359-cda89b5feb30\"\t, \r\n\t\"Expanded\":false}\r\n"}

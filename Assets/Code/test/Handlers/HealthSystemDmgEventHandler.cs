@@ -21,7 +21,7 @@ namespace test {
     
     public class HealthSystemDmgEventHandler {
         
-        public Health Group;
+        public Health SourceEntity;
         
         private test.DmgEvent _Event;
         
@@ -52,15 +52,15 @@ namespace test {
         }
         
         public virtual System.Collections.IEnumerator Execute() {
-            ActionNode14_a = Group.HealthValue;
+            ActionNode14_a = SourceEntity.HealthValue;
             ActionNode14_b = Event.DmgValue;
             // ActionNode
-            while (this.DebugInfo("8c69d3e8-48ec-4ca0-b56c-457348fa1617","9bc983a9-1004-44cf-8efa-6317bb6adb97", this) == 1) yield return null;
+            while (this.DebugInfo("","9bc983a9-1004-44cf-8efa-6317bb6adb97", this) == 1) yield return null;
             // Visit uFrame.ECS.Actions.IntLibrary.Subtract
             ActionNode14_Result = uFrame.ECS.Actions.IntLibrary.Subtract(ActionNode14_a, ActionNode14_b);
             // SetVariableNode
             while (this.DebugInfo("9bc983a9-1004-44cf-8efa-6317bb6adb97","a19e13ba-2ed8-4a9d-832c-d9a989304ed1", this) == 1) yield return null;
-            Group.HealthValue = (System.Int32)ActionNode14_Result;
+            SourceEntity.HealthValue = (System.Int32)ActionNode14_Result;
             yield break;
         }
     }

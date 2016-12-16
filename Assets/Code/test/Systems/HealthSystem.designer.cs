@@ -67,24 +67,23 @@ namespace test {
             this.OnEvent<test.DmgEvent>().Subscribe(_=>{ HealthSystemDmgEventFilter(_); }).DisposeWith(this);
         }
         
-        protected virtual void HealthSystemDmgEventHandler(test.DmgEvent data, Health group) {
+        protected virtual void HealthSystemDmgEventHandler(test.DmgEvent data, Health sourceentity) {
             var handler = HealthSystemDmgEventHandlerInstance;
             handler.System = this;
             handler.Event = data;
-            handler.Group = group;
+            handler.SourceEntity = sourceentity;
             StartCoroutine(handler.Execute());
         }
         
         protected void HealthSystemDmgEventFilter(test.DmgEvent data) {
-            var HealthItems = HealthManager.Components;
-            for (var HealthIndex = 0
-            ; HealthIndex < HealthItems.Count; HealthIndex++
-            ) {
-                if (!HealthItems[HealthIndex].Enabled) {
-                    continue;
-                }
-                this.HealthSystemDmgEventHandler(data, HealthItems[HealthIndex]);
+            var SourceEntityHealth = HealthManager[data.SourceEntity];
+            if (SourceEntityHealth == null) {
+                return;
             }
+            if (!SourceEntityHealth.Enabled) {
+                return;
+            }
+            this.HealthSystemDmgEventHandler(data, SourceEntityHealth);
         }
     }
     
