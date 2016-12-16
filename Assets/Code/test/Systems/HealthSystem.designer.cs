@@ -26,6 +26,8 @@ namespace test {
         
         private IEcsComponentManagerOf<Health> _HealthManager;
         
+        private IEcsComponentManagerOf<MenuComponent> _MenuComponentManager;
+        
         private IEcsComponentManagerOf<NewGroupNode> _NewGroupNodeManager;
         
         private HealthSystemDmgEventHandler HealthSystemDmgEventHandlerInstance = new HealthSystemDmgEventHandler();
@@ -36,6 +38,15 @@ namespace test {
             }
             set {
                 _HealthManager = value;
+            }
+        }
+        
+        public IEcsComponentManagerOf<MenuComponent> MenuComponentManager {
+            get {
+                return _MenuComponentManager;
+            }
+            set {
+                _MenuComponentManager = value;
             }
         }
         
@@ -51,6 +62,7 @@ namespace test {
         public override void Setup() {
             base.Setup();
             HealthManager = ComponentSystem.RegisterComponent<Health>(2);
+            MenuComponentManager = ComponentSystem.RegisterComponent<MenuComponent>(4);
             NewGroupNodeManager = ComponentSystem.RegisterGroup<NewGroupNodeGroup,NewGroupNode>();
             this.OnEvent<test.DmgEvent>().Subscribe(_=>{ HealthSystemDmgEventFilter(_); }).DisposeWith(this);
         }

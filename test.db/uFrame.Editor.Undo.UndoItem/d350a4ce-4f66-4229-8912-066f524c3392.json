@@ -1,8 +1,0 @@
-{
-	"Identifier":"d350a4ce-4f66-4229-8912-066f524c3392"	, 
-	"Time":"12/16/2016 2:34:34 PM"	, 
-	"Group":143434	, 
-	"DataRecordId":"884006fc-e7e6-45ab-ae85-9b823f130e1f"	, 
-	"Type":2	, 
-	"RecordType":"uFrame.ECS.Editor.HandlerNode, Assembly-CSharp-Editor-firstpass, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"	, 
-	"Data":"{\r\n\t\"CodeHandler\":false\t, \r\n\t\"Custom\":false\t, \r\n\t\"MetaType\":\"288a1ba8-09b6-4030-86c9-789f005d08eb\"\t, \r\n\t\"VariableCount\":0\t, \r\n\t\"VariableName\":\"HandlerNode24\"\t, \r\n\t\"Name\":\"DeathSystemDeathEvent\"\t, \r\n\t\"Order\":0\t, \r\n\t\"GraphId\":\"64710783-1311-4120-8e27-bdedd91f71a0\"\t, \r\n\t\"Identifier\":\"884006fc-e7e6-45ab-ae85-9b823f130e1f\"\t, \r\n\t\"Expanded\":false}\r\n"}
